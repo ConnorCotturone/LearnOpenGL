@@ -88,6 +88,8 @@ int main() {
 	// generate the VAO and VBO with only 1 object each, order matters
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
+	// make the vao the current vertex array object
+	glBindVertexArray(VAO);
 	// bind the vbo
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	// introduce verticies to the vbo
@@ -136,5 +138,4 @@ int main() {
 	// terminate glfw
 	glfwTerminate();
 	return 0;
-
 }
